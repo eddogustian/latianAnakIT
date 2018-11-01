@@ -22,7 +22,6 @@ body {
   -moz-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out;
 }
-
 #sideBar {
   width: 250px;
   position: fixed;
