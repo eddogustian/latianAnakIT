@@ -14,6 +14,7 @@
 // Route::get('/', function () {
 //     return view('welcome');
 // });
+Route::resource('kontak','Kontak'); //tambahkan baris ini
 
 Route::get('/', function () {
     return view('index');

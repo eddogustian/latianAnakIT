@@ -40,7 +40,7 @@
         <ul class="main-nav">
             <!-- Your Logo Or Site Name -->
             <li class="nav-brand">
-                <a href="/">Anak IT - Home</a>
+                <a href="/">Nadyne - Prata </a>
             </li>
             <li>
                 <a href="#">- Tambah Kontak</a>

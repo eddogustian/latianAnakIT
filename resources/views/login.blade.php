@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Login</h1>
+            <h1>Nadyne Prata -  Login</h1>
             <hr>
             @if(\Session::has('alert'))
                 <div class="alert alert-danger">
