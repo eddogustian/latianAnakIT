@@ -21,6 +21,8 @@ Route::get ( '/', function () {
     $data = Data::all ();
     return view ( 'kontak','Kontak' )->withData ( $data );
 } );
+Route::post('import-file-kontak', 'Kontak@importFileKontak')->name('import.file.kontak');
+Route::get('export-file-kontak/{type}', 'Kontak@exportFileKontak')->name('export.file.kontak');
 
 Route::get('/', function () {
     return view('index');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\ModelKontak; //import file si model 
 use Illuminate\Http\Request;
+use DB;
 // use Datatables;
 
 class Kontak extends Controller
@@ -110,4 +111,73 @@ class Kontak extends Controller
         $data->delete();
         return redirect()->route('kontak.index')->with('alert-success','Data berhasi dihapus!');
     }
+
+     public function importFileKontak(Request $request){
+
+
+        if($request->hasFile('sample_file')){
+
+            $path = $request->file('sample_file')->getRealPath();
+
+            $data = \Excel::load($path)->get();
+
+
+
+            if($data->count()){
+
+                foreach ($data as $key => $value) {
+
+                    $arr[] = ['nama' => $value->nama, 'email' => $value->email, 'nohp' => $value->nohp, 'alamat' => $value->alamat];
+
+                }
+             
+
+                if(!empty($arr)){
+
+                    DB::table('model_kontaks')->insert($arr);
+
+                    dd('Insert Recorded successfully.');
+
+                } 
+                print_r($arr); die();
+
+            }
+
+        }
+
+        dd('Request data does not have any files to import.');      
+
+    } 
+
+
+
+    /**
+
+     * Create a new controller instance.
+
+     *
+
+     * @return void
+
+     */
+
+    public function exportFileKontak($type){
+
+        $kontaks = ModelKontak::get()->toArray();
+
+
+
+        return \Excel::create('hdtuto_demo', function($excel) use ($kontaks) {
+
+            $excel->sheet('sheet name', function($sheet) use ($kontaks)
+
+            {
+
+                $sheet->fromArray($kontaks);
+
+            });
+
+        })->download($type);
+
+    }      
 }
