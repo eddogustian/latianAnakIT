@@ -6,7 +6,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Tutorial Login, Register, Validasi dengan Laravel 5.4</h1>
+            <h1>Nadyne Prata -  Tutorial Login, Register, Validasi dengan Laravel 5.4</h1>
             <p>Hallo, {{Session::get('name')}}. Apakabar?</p>
 
             <h2>* Email kamu : {{Session::get('email')}}</h2>

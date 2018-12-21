@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use App\ModelKontak; //import file si model 
 use Illuminate\Http\Request;
+// use Datatables;
 
 class Kontak extends Controller
 {
@@ -88,6 +89,12 @@ class Kontak extends Controller
         $data->save();
         return redirect()->route('kontak.index')->with('alert-success','Data berhasil diubah!');
     }
+    
+    // public function getdata()
+    // {
+    //     $data = ModelKontak::select('nama','email','nohp','alamat');
+    //     return Datatables::of($data)->make(true);
+    // }
 
     /**
      * Remove the specified resource from storage.

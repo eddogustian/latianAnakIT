@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Tutorial Laravel 5.4</h1>
+            <h1>Nadyne Prata-  Tutorial Laravel 5.4</h1>
             <p>Apa saja yang akan kamu pelajari ?</p>
 
             <h2>* Templating Laravel 5.4</h2>

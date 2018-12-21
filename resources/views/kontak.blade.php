@@ -1,3 +1,4 @@
+
 @extends('base')
 @section('content')
     <!-- Main Section -->
@@ -12,7 +13,7 @@
                 </div>
             @endif
             <hr>
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="table">
                 <thead>
                 <tr>
                     <th>No.</th>
@@ -47,5 +48,34 @@
         </div>
         <!-- /.content -->
     </section>
+<script>
+  $(function () {
+  $('#table').dataTable({
+    paging: true,
+    fixedHeader: {
+      header: true
+    },
+        dom: 'Bfrtip',
+        buttons: [
+      {
+        extend: 'excel',
+        text: 'Excel <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'
+      },
+        {
+        extend: 'csv',
+        text: 'CSV <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'
+      },
+      {
+        extend: 'pdf',
+        text: 'PDF <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span>'
+      },
+      
+            'copy',
+            'colvis'
+        ],
+    
+  });
+});
+ </script>
     <!-- /.main-section -->
 @endsection

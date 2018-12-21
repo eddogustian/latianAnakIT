@@ -5,7 +5,7 @@
         <!-- Add Your Content Inside -->
         <div class="content">
             <!-- Remove This Before You Start -->
-            <h1>Anak IT -  Tutorial Laravel 5.4</h1>
+            <h1>Nadyne Prata -  Tutorial Laravel 5.4</h1>
 
             <h3>Halo, ini adalah halaman kedua!</h3>
         </div>
